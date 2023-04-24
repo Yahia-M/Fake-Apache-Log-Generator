@@ -56,7 +56,7 @@ faker = Faker()
 timestr = time.strftime("%Y%m%d-%H%M%S")
 otime = datetime.datetime.now()
 
-outFileName = 'access_log_'+timestr+'.log' if not file_prefix else file_prefix+'_access_log_'+timestr+'.log'
+outFileName = 'access_log_'+timestr+'.log' if not file_prefix else file_prefix
 
 for case in switch(output_type):
     if case('LOG'):
