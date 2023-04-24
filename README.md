@@ -20,11 +20,6 @@ Generate 100 log lines into a .log file
 $ python apache-fake-log-gen.py -n 100 -o LOG 
 ```
 
-Generate 100 log lines into a .gz file at intervals of 10 seconds
-```
-$ python apache-fake-log-gen.py -n 100 -o GZ -s 10
-```
-
 Infinite log file generation (useful for testing File Tail Readers)
 ```
 $ python apache-fake-log-gen.py -n 0 -o LOG 
@@ -39,7 +34,7 @@ $ python apache-fake-log-gen.py -n 100 -o LOG -p WEB1
 Detailed help
 ```
 $ python apache-fake-log-gen.py -h
-usage: apache-fake-log-gen.py [-h] [--output {LOG,GZ,CONSOLE}]
+usage: apache-fake-log-gen.py [-h] [--output {LOG}]
                               [--num NUM_LINES] [--prefix FILE_PREFIX]
                               [--sleep SLEEP]
 
@@ -47,8 +42,8 @@ Fake Apache Log Generator
 
 optional arguments:
   -h, --help            show this help message and exit
-  --output {LOG,GZ,CONSOLE}, -o {LOG,GZ,CONSOLE}
-                        Write to a Log file, a gzip file or to STDOUT
+  --output {LOG}, -o {LOG}
+                        Write to a Log file
   --num NUM_LINES, -n NUM_LINES
                         Number of lines to generate (0 for infinite)
   --prefix FILE_PREFIX, -p FILE_PREFIX
